@@ -1,9 +1,9 @@
 class Solution {
-    func twoSum(_ n: [Int], _ t: Int) -> [Int] {
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         var dict = [Int:Int]()
-        for (i, n) in n.enumerated() {
-            if let val = dict[t-n] { return [val, i] }
-            dict[n] = i
+        for (ind, num) in nums.enumerated() {
+            if let val = dict[target-num] { return [val, ind] }
+            dict[num] = ind
         }
         return []
     }
